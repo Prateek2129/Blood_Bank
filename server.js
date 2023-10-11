@@ -30,9 +30,8 @@ app.use("/api/v1/admin", require("./routes/adminRoutes"));
 const PORT = process.env.PORT || 8080;
 
 //listen
-app.listen(PORT, () => {
+app.listen(8000, () => {
   console.log(
-    `Node Server Running In ${process.env.DEV_MODE} ModeOn Port ${process.env.PORT}`
-      .bgBlue.white
+    'server is running'
   );
 });
