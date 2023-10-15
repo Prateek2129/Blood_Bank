@@ -8,7 +8,7 @@ const connectDB = require("./config/db");
 dotenv.config();
 
 //mongodb connection
-connectDB();
+
 
 //rest object
 const app = express();
@@ -30,8 +30,7 @@ app.use("/api/v1/admin", require("./routes/adminRoutes"));
 const PORT = process.env.PORT || 8080;
 
 //listen
-app.listen(8000, () => {
-  console.log(
-    'server is running'
-  );
-});
+app.listen(PORT, async()=>{
+  console.log('server is running on port')
+  await connectDB();
+})  
